@@ -29,7 +29,11 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    {
+      href: "https://medium.com/@templeajuzie",
+      icon: NotebookIcon,
+      label: "Blog",
+    },
   ],
   contact: {
     email: "templeajuzie@gmail.com",
@@ -44,7 +48,7 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/iamtempleajuzie/",
         icon: Icons.linkedin,
         navbar: true,
       },
