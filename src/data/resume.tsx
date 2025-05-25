@@ -8,9 +8,9 @@ export const DATA = {
   location: "India",
   locationLink: "https://anshtyagi.me",
   description:
-    "Experienced MERN Stack Developer with a strong background in cloud computing, certified as an AWS Cloud Practitioner. Passionate about creating robust and scalable applications.",
+    "Experienced Full Stack Developer with a strong focus on API development and cloud-based architecture. Passionate about building robust, scalable, and secure end-to-end applications.",
   summary:
-    "Founded [Enterbox](https://www.enterbox.app), a versatile platform supporting businesses with tools for web creation, hosting, form creation, email campaigns, AI integration, store management, and more. Built the platform from the ground up, handling product design, development, and team coordination to serve the needs of over 200 businesses within its first month.",
+    "Hard-working and enthusiastic web developer with a passion for building dynamic, responsive applications. Pursuing a degree in Computer Science, with a strong focus on clean, efficient code and continuous learning. Actively explores new technologies through personal projects, open-source contributions, and coding challenges.",
   
   avatarUrl:
     "https://scontent-zrh1-1.xx.fbcdn.net/v/t39.30808-6/308443832_109109325295191_1674111835950351444_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeENRXIJ-jJ1K3t_eCIbMRWdz3iBgLaL9HfPeIGAtov0dxK86MNMwOPmVD5g0-a_dQdpvvgFL6HKCZDl6KREFLcx&_nc_ohc=3n2ER2TspfgQ7kNvgE3TxmB&_nc_zt=23&_nc_ht=scontent-zrh1-1.xx&_nc_gid=Aq_ffTslBDJDAYin_VulxKw&oh=00_AYDbE7FDW9-UfXMyJTeTEVaXh2GqyT25urlb08siQDc96Q&oe=67353D25",
@@ -63,17 +63,12 @@ export const DATA = {
       },
       X: {
         name: "X",
-        url: "https://x.com/iamtempleajuzie",
+        url: "https://x.com/Ansh7845",
         icon: Icons.x,
 
         navbar: true,
       },
-      Youtube: {
-        name: "Youtube",
-        url: "https://www.youtube.com/@templeajuzie",
-        icon: Icons.youtube,
-        navbar: true,
-      },
+     
       email: {
         name: "Send Email",
         url: "www.gmail.com",
@@ -152,164 +147,42 @@ export const DATA = {
       school: "ABES Engineering College",
       href: "https://abes.ac.in/",
       degree: "B.Tech",
-      logoUrl: "https://scontent.fdel27-1.fna.fbcdn.net/v/t39.30808-1/300943914_461316889338355_7381212442247797989_n.png?_nc_cat=101&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=qkFawD9WDGEQ7kNvwGJGwkW&_nc_oc=AdnsgOWak2FgBkFpcI0jkQfeCE_WSPGGdmrfQ-hISn0jURcZkR0bsIzdKMlQZI8LxuE4CTDuHDuAeipz5VbYPwMx&_nc_zt=24&_nc_ht=scontent.fdel27-1.fna&_nc_gid=zGKfxp-RV29p5Lq_QPyeRg&oh=00_AfFdIVawVNlop77FKjKQFeGH3grMkT99On0q3C5smaUCFA&oe=6806ECCA",
+      logoUrl: "https://cdn.universitykart.com//Content/upload/admin/witkmh24.rj3.jpg",
       start: "2023",
       end: "2027",
     },
   ],
-  projects: [
-    {
-      title: "Enterbox",
-      href: "https://www.enterbox.app",
-      dates: "Nov 4 - Presentt",
-      active: true,
-      description:
-        "At Enterbox, we believe every business deserves a powerful, custom-built digital platform. We provide the tools to help you create, manage, and scale your online presence with ease. From startups to established enterprises, our platform is designed to empower growth at every stage.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "Express Js",
-        "Mongo DB",
-        "TailwindCSS",
-        "Open Ai",
-        "Azure",
-        "Klip Ai",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://www.enterbox.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://firebasestorage.googleapis.com/v0/b/temple-ajuzie.appspot.com/o/Web%20Images%2FEnterbox%20preview.mp4?alt=media&token=4f72a3fc-96fe-4a36-919d-4279d95fbbc4",
-    },
-    {
-      title: "ABC Networks 24",
-      href: "https://www.abcnetworks24.com",
-      dates: "Oct 2023 - Present",
-      active: true,
-      description:
-        "Designed, developed, and implemented a comprehensive News Platform, CRM, and Ecommerce solution, enabling seamless content management, customer relationship tracking, and online sales. Integrated advanced user engagement features, automated marketing workflows, and payment gateways.",
-      technologies: [
-        "Typescript",
-        "Cloudinary",
-        "Mongo DB",
-        "Next.js",
-        "TailwindCSS",
-        "Stripe",
-        "Node JS",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://www.abcnetworks24.com/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/abcnetworks247/abc/tree/main/client",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://firebasestorage.googleapis.com/v0/b/temple-ajuzie.appspot.com/o/Web%20Images%2FScreen%20Recording%202024-11-10%20at%209.58.55%E2%80%AFAM.mov?alt=media&token=e548772c-c9a5-4ae5-9874-33004c484009",
-    },
-    {
-      title: "ABC Admin",
-      href: "https://www.abc-admin-gold.vercel.app",
-      dates: "April 2023 - September 2023",
-      active: true,
-      description:
-        "Designed Admin Panel, developed, and implemented a comprehensive News Platform, CRM, and Ecommerce solution, enabling seamless content management, customer relationship tracking, and online sales. Integrated advanced user engagement features, automated marketing workflows, and payment gateways.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "Node Js",
-        "Mongo Db",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Stripe",
-        "Cloudflare",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://abc-admin-gold.vercel.app/auth/signin",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://firebasestorage.googleapis.com/v0/b/temple-ajuzie.appspot.com/o/Web%20Images%2FScreen%20Recording%202024-11-10%20at%2011.42.01%E2%80%AFAM.mov?alt=media&token=5439b1f9-5789-49d8-a117-335ef820bf20",
-    },
-    {
-      title: "Enterbox Admin",
-      href: "https://www.enterbox.app",
-      dates: "Nov 2024 - Present",
-      active: true,
-      description:
-        "Developed the admin web app, Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models, upload manager, and a 360 CMS System",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://www.enterbox.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://firebasestorage.googleapis.com/v0/b/temple-ajuzie.appspot.com/o/Web%20Images%2FScreen%20Recording%202024-11-10%20at%2012.32.32%E2%80%AFPM.mov?alt=media&token=13b19cd2-662c-41b7-982c-787c0bf936a9",
-    },
-  ],
+ 
 
   certifications: [
     {
-      title: "AWS Certified Cloud Practitioner",
-      platform: "Amazon Web Services",
+      title: "HTML, CSS, JS ",
+      platform: "Harkirit",
       description:
         "Achieved foundational AWS certification covering core cloud concepts, security, and pricing.",
       image:
-        "data:image/png;base64,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",
+        "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*l4xICbIIYlz1OTymWCoUTw.jpeg",
       links: [
         {
           title: "Certificate",
           icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+          href: "https://www.youtube.com/@harkirat1/",
         },
       ],
     },
-    {
-      title: "JavaScript",
+    
+     {
+      title: "Node.js Development",
       platform: "Udemy",
       description:
-        "Completed JavaScript course covering ES6+ syntax, DOM manipulation, and basic programming concepts.",
+        "Covered Node.js fundamentals, asynchronous programming, and building RESTful APIs.",
       image:
-        "data:image/png;base64,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",
+        "https://miro.medium.com/v2/resize:fit:800/1*bc9pmTiyKR0WNPka2w3e0Q.png",
       links: [
         {
           title: "Course",
           icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://www.udemy.com/course/javascript-basics/",
+          href: "https://www.youtube.com/@harkirat1/",
         },
       ],
     },
@@ -324,25 +197,11 @@ export const DATA = {
         {
           title: "Course",
           icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://www.udemy.com/course/typescript-essentials/",
+          href: "https://www.youtube.com/@harkirat1/",
         },
       ],
     },
-    {
-      title: "Node.js Development",
-      platform: "Udemy",
-      description:
-        "Covered Node.js fundamentals, asynchronous programming, and building RESTful APIs.",
-      image:
-        "https://miro.medium.com/v2/resize:fit:800/1*bc9pmTiyKR0WNPka2w3e0Q.png",
-      links: [
-        {
-          title: "Course",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://www.udemy.com/course/nodejs-development/",
-        },
-      ],
-    },
+   
     {
       title: "React.js",
       platform: "Udemy",
@@ -354,7 +213,22 @@ export const DATA = {
         {
           title: "Course",
           icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://www.udemy.com/course/reactjs-for-beginners/",
+          href: "https://www.youtube.com/@harkirat1/",
+        },
+      ],
+    },
+     {
+      title: "Next.js",
+      platform: "Udemy",
+      description:
+        "Completed React.js course focused on component-based architecture and state management.",
+      image:
+        "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/nextjs-icon-dark-background.png?itok=0YHs2vTR",
+      links: [
+        {
+          title: "Course",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.youtube.com/@harkirat1/",
         },
       ],
     },
