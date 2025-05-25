@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface Project {
     title: string;
@@ -109,17 +110,17 @@ const Index = () => {
                                      animate-scale-in cursor-pointer"
                             style={{ animationDelay: `${idx * 100}ms` }}
                         >
-                            <div className="relative overflow-hidden">
-                                <img
+                                <Image
                                     src={project.img}
                                     alt={project.title}
                                     className="w-full h-40 object-cover transition-transform duration-700 
                                              group-hover:scale-110"
+                                    width={400}
+                                    height={160}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent 
                                               opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                            
+                                                
                             <div className="p-5 space-y-3">
                                 <div className="space-y-2">
                                     <h2 className="text-lg font-semibold text-gray-800 group-hover:text-blue-600 

@@ -1,4 +1,6 @@
 "use client";
+
+
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -8,8 +10,14 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Image from "next/image";
 import Markdown from "react-markdown";
-import Lottie from "lottie-react";
-import helloAnimation from "../../public/hello-last.json";
+import dynamic from 'next/dynamic';
+
+
+const LottieAnimation = dynamic(
+  () => import('../components/lottie'),
+  { ssr: false }
+);
+
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -33,7 +41,7 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-screen space-y-12 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <div className="w-full flex justify-center pt-8">
-        <Lottie animationData={helloAnimation} style={{ width: 200, height: 200 }} />
+        <LottieAnimation />
       </div>
 
      
@@ -130,7 +138,6 @@ export default function Page() {
         .tech-icon:hover { transform: scale(1.1); }
       `}</style>
 
-      {/* Existing skills section left untouched */}
       <section id="skills" className="relative">
         <BlurFade delay={BLUR_FADE_DELAY * 9}>
           <h2 className="text-2xl font-bold text-center mb-8">Technologies &amp; Tools 🛠️</h2>

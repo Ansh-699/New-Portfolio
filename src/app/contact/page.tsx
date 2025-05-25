@@ -6,9 +6,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import mailAnimation from "../../../public/mail.json";
-import Lottie from 'lottie-react';
-
+import dynamic from "next/dynamic";
+const LottieAnimation = dynamic(() => import("../../components/lottie2"), {
+  ssr: false,
+});
 
 import {
   Mail,
@@ -47,8 +48,18 @@ export default function Contact() {
   };
 
   const socialLinks = [
-    { name: "GitHub", icon: Github, href: "https://github.com/Ansh-699", color: "hover:text-gray-900" },
-    { name: "LinkedIn", icon: Linkedin, href: "#", color: "hover:text-blue-600" },
+    {
+      name: "GitHub",
+      icon: Github,
+      href: "https://github.com/Ansh-699",
+      color: "hover:text-gray-900",
+    },
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
+      href: "#",
+      color: "hover:text-blue-600",
+    },
     { name: "Twitter", icon: Twitter, href: "#", color: "hover:text-sky-500" },
   ];
 
@@ -89,7 +100,6 @@ export default function Contact() {
         <div className="w-full max-w-6xl">
           <section className="glass-effect rounded-3xl shadow-2xl overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-0">
-              {/* Left Side - Contact Form */}
               <div className="p-8 lg:p-12 space-y-8">
                 <div className="text-center lg:text-left">
                   <BlurFadeText
@@ -105,7 +115,6 @@ export default function Contact() {
                   </BlurFade>
                 </div>
 
-                {/* Social Links */}
                 <BlurFade delay={BLUR_FADE_DELAY * 3}>
                   <div className="flex justify-center lg:justify-start space-x-6">
                     {socialLinks.map((social, index) => (
@@ -121,7 +130,6 @@ export default function Contact() {
                   </div>
                 </BlurFade>
 
-                {/* Contact Form */}
                 <BlurFade delay={BLUR_FADE_DELAY * 4}>
                   <form onSubmit={sendEmail} className="space-y-6">
                     <div className="space-y-2">
@@ -198,21 +206,19 @@ export default function Contact() {
                 </BlurFade>
               </div>
 
-              {/* Right Side - Animated Illustration */}
               <div className="p-8 lg:p-12 flex items-center justify-center bg-gray-50">
                 <BlurFade delay={BLUR_FADE_DELAY * 5}>
                   <div className="text-center space-y-8">
                     <div className="float-animation">
                       <div className="w-48 h-48 mx-auto rounded-full flex items-center justify-center shadow-2xl bg-white">
-                        {/* <Mail className="w-24 h-24 text-blue-600" /> */}
-       <Lottie animationData={mailAnimation} style={{ width: 350, height: 300 }} />
-
-
+                        <LottieAnimation />
                       </div>
                     </div>
 
                     <div className="space-y-4">
-                      <h3 className="text-2xl font-bold text-gray-800">Let&apos;s Start a Conversation!</h3>
+                      <h3 className="text-2xl font-bold text-gray-800">
+                        Let&apos;s Start a Conversation!
+                      </h3>
                       <p className="text-gray-600 max-w-sm">
                         I&apos;m always excited to discuss new projects,
                         creative ideas, or opportunities to be part of your
