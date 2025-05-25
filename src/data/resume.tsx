@@ -21,11 +21,10 @@ export const DATA = {
     "Node.js",
     "AWS",
     "AZURE",
-    "Mongoose",
+    "MongoDB",
      "Docker",
      "Kubernetes",
-     "Java",
-     "C++",
+     
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },

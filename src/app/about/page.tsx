@@ -16,25 +16,25 @@ const Index = () => {
         {
             title: "Medium-blog",
             description: "End-to-end medium-like blog",
-            img: "https://repository-images.githubusercontent.com/410944720/783ebec4-d13b-4a53-99a6-1e79f824c9c4",
+            img: "/medium.png",
             technologies: ["React", "Next.js", "TypeScript", "Tailwind"]
         },
         {
             title: "Mock Paytm",
             description: "Money transfer system",
-            img: "https://coracle-blog-media.s3.eu-central-1.amazonaws.com/2024/04/money_transfer-e1544123010732-scaled.jpg",
+            img: "/paytm.jpg",
             technologies: ["Node.js", "Express", "MongoDB", "React"]
         },
         {
             title: "Chat system",
             description: "WebSocket chat under development",
-            img: "https://crocoder7.github.io/assets/images/finalChat.png",
+            img: "/chat.png",
             technologies: ["Socket.IO", "React", "Node.js", "Redis"]
         },
         {
             title: "Zerodha E-2-E",
             description: "Learning phase",
-            img: "../../../public/zerodha.png",
+            img: "/zerodha.png",
             technologies: ["React", "Redux", "JavaScript", "CSS"]
         },
     ];
