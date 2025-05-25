@@ -8,6 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import Lottie from "lottie-react";
+import helloAnimation from "../../public/hello-last.json";
+import Home from "@/components/tools";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -18,6 +21,7 @@ export default function Page() {
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5 mt-10">
+            {/* <Lottie animationData={helloAnimation} style={{ width: 300, height: 250 }} /> */}
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-2xl xl:text-3xl/none"
@@ -98,6 +102,10 @@ export default function Page() {
         </div>
       </section>
       <section id="skills">
+        <div>
+          
+          {/* <Home /> */}
+        </div>
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>

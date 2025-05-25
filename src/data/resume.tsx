@@ -2,16 +2,16 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Temple Ajuzie",
-  initials: "TA",
-  url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  name: "Ansh Tyagi",
+  initials: "AT",
+  url: "https://anshtyagi.me",
+  location: "India",
+  locationLink: "https://anshtyagi.me",
   description:
     "Experienced MERN Stack Developer with a strong background in cloud computing, certified as an AWS Cloud Practitioner. Passionate about creating robust and scalable applications.",
   summary:
     "Founded [Enterbox](https://www.enterbox.app), a versatile platform supporting businesses with tools for web creation, hosting, form creation, email campaigns, AI integration, store management, and more. Built the platform from the ground up, handling product design, development, and team coordination to serve the needs of over 200 businesses within its first month.",
-  // "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+  
   avatarUrl:
     "https://scontent-zrh1-1.xx.fbcdn.net/v/t39.30808-6/308443832_109109325295191_1674111835950351444_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeENRXIJ-jJ1K3t_eCIbMRWdz3iBgLaL9HfPeIGAtov0dxK86MNMwOPmVD5g0-a_dQdpvvgFL6HKCZDl6KREFLcx&_nc_ohc=3n2ER2TspfgQ7kNvgE3TxmB&_nc_zt=23&_nc_ht=scontent-zrh1-1.xx&_nc_gid=Aq_ffTslBDJDAYin_VulxKw&oh=00_AYDbE7FDW9-UfXMyJTeTEVaXh2GqyT25urlb08siQDc96Q&oe=67353D25",
   skills: [
@@ -22,33 +22,33 @@ export const DATA = {
     "AWS",
     "AZURE",
     "Mongoose",
-    // "Docker",
-    // "Kubernetes",
-    // "Java",
-    // "C++",
+     "Docker",
+     "Kubernetes",
+     "Java",
+     "C++",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     {
-      href: "https://medium.com/@templeajuzie",
+      href: "https://anshtyagi.me",
       icon: NotebookIcon,
       label: "Blog",
     },
   ],
   contact: {
-    email: "templeajuzie@gmail.com",
-    tel: "+234-905-263-7046",
+    email: "anshtyagi7845@gmail.com",
+    tel: "+91-9027033909",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/templeajuzie",
+        url: "https://github.com/Ansh-699",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/iamtempleajuzie/",
+        url: "https://www.linkedin.com/AnshT7845/",
         icon: Icons.linkedin,
         navbar: true,
       },
@@ -131,21 +131,21 @@ export const DATA = {
   ],
   education: [
     {
-      school: "University of Port Harcourt",
-      href: "https://www.uniport.edu.ng/",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
+      school: "CJDAV Public school",
+      href: "https://davmeerut.org/",
+      degree: "Primary Education",
       logoUrl:
-        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxESEhISEhIWFhUWGBUWGRgXFxoVGhUWFRgXFxgVFRUYHyghGRslHRYXITEhJSsuMC8vGB8zODMtNyotLisBCgoKDg0OGxAQGy0lICUtMC8tLy0tLi0tLS0tMC8tListLS0wLy0tLy0uLS0tLS0tLS0tLS0tLS0tLS0tLi0tLf/AABEIANoA6AMBEQACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcBBQIDBAj/xABPEAABAwICBQUJCgwEBwAAAAABAAIDBBESIQUGMUFRBxMiYXEUFTJSgZGhsdEjMzRCU1RikpOyJENyc4KDorPB0tPwJTVEoxZjZHSUwuH/xAAaAQEAAgMBAAAAAAAAAAAAAAAABAUBAgMG/8QANxEAAgECAwQGCgEFAQEAAAAAAAECAxEEITEFEkFRE1JhcYGRFBUiMjM0scHR8EIGI6Hh8WKC/9oADAMBAAIRAxEAPwC8UAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEBxxjigGLqPmQGC/q9XtQHHnxxHnHtQXOQffd6vagM4u3zIAHDigOSAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCA4OkAF93HYPOgI/pPXSihuDOHu8WIc4ct2IdEeUhaOpFEWrjaNPWXlmRav5Tt0NN2Oldf8AYb/MubrckQJ7XX8I+ZoavX3SD9krYxwjY0el1z6Vo6siHPadeWlkWLqSTPRQyzEyPdzly8l17SPAyOWwBd4O8S6wU5VKKlLXP6m9FDEPxbPqj2LclWOfc7PEb5ghmxxdRRHbGw/oj2IYsVNrvpKeCvmbDNJG0COzWPc1ouxpPRBso1STUsmUGOxFSnXajJrQ8lJr3pBm2USDhIxp9IAPpWFVkjlDadeOrT8CQaO5Ttgnp/0oneqN+X7S3VbmibT2sv5x8iW6J1to6iwZM0OPxH+5u7AHZO8hXVTi9CwpYqlV92RvA5bEg5IAgCAIAgCAIAgCAIAgCAIAgPBpTS8FO3HNI1g3Ytp/JaM3HsWG0tTnUqwpq83YgmmuUva2liv9OX1tjHrJ8i4utyKuttVLKmr9rITpXTdTUn3aZzx4t7NHYwWb6Fycm9Sqq4qrV95mvWpHCAIC7eTwf4fT/rP3j1Lp+6j1Oz/l4/vEka3JgQBAUpyj/wCYT9kf7tii1PePM7S+YfgRpcyAEAQG80NrXV01gyTEwfi5Om3yXzb5CFuqkkTaOPrUuN1yZYer+v1PPZknuMhys83Y4/Rk3djrLvGqmXOH2hSq5PJ9pMGuuuhPMoAgCAIAgCAIAgCAIAgCApnlMH4c48Y4z6LfwUar7x53avxvAiq5FYEAQBAEBd3J/wD5fT9j/wB49S6fuo9Vgfl4kiW5LCAIClOUb/MJ/wBX+7YotT3meZ2l8w/AjS5kAIAgCAIC+NUB+BUv5mL7gUyOiPX4f4Ue5fQ3C2OwQBAEAQBAEAQBAEAQBAUvyoaUpY63DK2cu5qI+5lmGxxW8LO6608C6y3k7ELEYCFeW9JsiXf2g+TqvPEt/VUusv3wOHqil1mO/tB4lV/te1PVUusv3wHqil1mO/lB4lV/te1PVUut++Rj1RS6zHfyg8Wq80X8yeqpdZGfU9LrMd/KDxarzRfzJ6ql1kY9UU+syZ6ucqUUUcVLDSVEpaDYBrXONyTfC1/WsVMMqEN6pOKS4t2LKjR6OChHOxMaXWqtfn3ulYPpuhb6Odv6FS1ttbPpu3Sp9yb+x3VGb4Hok1grAMqMnqD47+mQLhH+odnt++1/8sz0EzSaU5RaimGKbR1Q1o2uDWPaO1zJSB5Va4TFYTFPdpVot8s0/JpGjpzWqK707rhSVU753MqGl+HJrYyBhaG5Xk6lOlsyTd95FbX2dGtNzbZ4O/dFwqfqRf1Fr6ql1jj6np9Zjv3RcKn6kX9RPVUusPU9PrMd+6HhVfUi/qLPqqfWQ9Tw6zHfuh/6r7OL+qseqp9ZD1PDrMd+qH/qvs4v6qeqp9ZD1PDrMv8A1Re00dKWXwmCEtxAA2LARcAkA9hXFx3Xu8izpw3IqPJG4WDcIAgCAIAgCAIAgCAIAgPnflp/zN3VDD/7K2wXwvH8GUQVTDIQBATPUfUF+kI3yulMLA7AwiMyY3Dw94sBkL3zNxuUSviuie6sxclEHI7F8eskI22ZDgPncSo7x8uCMXJpq1qpBQxmOHnM3Xc93N4nX4kNGQ2AKk2hgKOPqdJiLvkrtJdyNo1JRWRs54i1rnAuya454SMhe3RsVU1v6awcl7F4+N/qdFXlxOTYCRtcTYHogAZ/lX9axS/pnBxXtuUn32+geIlwMmmPF/DMNI/Zzst5/wBNYJ+7vLuf5MdPIrrTfJQyaaSWOqEIecWDuc4W7jh6Ytnc2616jB15UKMaUry3Va71fec27u5DNd9R5NHtieJeejecLnBmDA/a1pFzkRexvuPUrChiVVbVrAiSlAIAgCA+o9Qj/htB/wBtT/u2qhrfEl3s1N+uYCAIAgCAIAgCAIAgCAID515Zj/ij/wA1D6irfBfC8TKIOpZkID36C0TJV1EVPF4Uhte1wxozc89QFz6N651KihFyZg+kdGaOZTxRwRAhkYDAOmMm5km3xic777lUcpOUm2YO9xIz8udxnfLwnjzLUGA1t9223xNg8IbD5kB0VjQYpNnvbybW3NIGbbG3kPBAd9rC/UDnna4ANi51vJ7UAyvYW22ywjI5i2FwI9aA5gnbnx+Ntvs+NYdSA8GnNFsqoJKeW5a8Yb53aTm2QDB4TTYjszW0JuElJA+b9K6Pkp5pIJRZ8bi13A8HDqIII6iFewmpxUkZPKtzIQBAfUPJ8f8ADaH/ALaD0MCoq/xJd7NSQrkAgCAIAgCAIAgCAIAgCA+feV7R879JPcyGV7eahF2xucLhuy4CtcHOKp2bWplEM70VXzaf7GT+VSukh1l5oyO89V82n+xk/lTpIdZeaMFj8nBpqBhllZU90yCx/BJ3CNl74AQzMmwJIO4DdcwMS5VHZNW70YbJm3XGk+RqN/8Ao5xt25YFF6CXNea/Ji5yGuVKNkdSOyjn/kToJc15oXM/8aU3i1n/AIc39NOglzXmvyLnVWa5U7o3tEdSSWuA/BKgbQRtwFOglzXmhc7Y9caaw6FQCAB8DqSfPzYWOhlzXmgcv+MKbhV/+HP/AEk6GXNeaMmBrbSfJ1G//RVI27fxadDLmvNAwdbab5Op3f6SqOzq5tOhlzXmgQflKpoK0NqIGVPdDQGlvcdQ0SsvkLmPJzbmxJ2XHC0zCydP2ZNW70Eyve8VZ80qfsJf5VN6WHWXmjI7w1nzOp+wl/lTpYdZeYuZ7wVvzOp+wl/lTpYdZeYufSGoEbmaPo2PaWubBEC1wLSCBaxBzByVLWadSTXMwSFcwEAQBAEAQBAEAQBAEAQFV8oU721hDXOAwMyBI4q/2bCLo5rizy+15yjiMnwRGu7JflH/AFj7VP6KHVXkVnTVOs/Md2y/KP8ArH2p0UOqvIdNU6z8zPd0vyr/AK7vanRU+qvIdPU6z8x3fN8rJ9d3tToqfVXkOnqdZ+ZnvhN8tJ9d3tWOhh1V5Genq9Z+ZnvlP8tJ9d3tToafVXkPSKvWfmzPfOf5aX7R3tToKfVXkPSKvWfmx30qPl5ftHe1Ogp9VeRn0mr1n5sz31qPl5ftHe1Y6Cl1V5BYit135sd9qn5xL9o/2p0FLqryQ9Jrdd+bM996n5xN9o/2p0FLqryQ9Jrdd+bHfip+cTfav9qej0uqvIelVuu/Nme/NV84m+1f7U9HpdVeSM+lVuu/NjvzVfOZvtX+1Y9GpdVeSHpVbrvzY79VXzmb7V/tT0aj1F5D0qt135st3VeUvpYHOJc4xsuSbknPMk7SvN4mKjWklzPX4OTlQg3yNquBJCAIAgCAIAgCAIAgCAICpuUb4Z+rZ/Feh2X8DxZ5XbPzHgiMKxKkIAgCAIAgCAIDb6G0MKlkoxYXsLCDuzvk4dZtn1FV+MxToyjlk9S12fg1iITzs1p43PDX0MkLyyRpafQRxad4UulWhVjvRZBr4edGW7NWPMupwCAIAgCAuTUw3o6f8i3mc4Ly2MX9+Xee02f8tDuN4oxMCAIAgCAIAgCA6p5sLXnaWtLrDabAm1uuyAifJhradI0rnyFvPse4Pa3LC1xLoyBwwm195aVIxNHopWWgJio4CAqflG+Gfq2ety9Bsv4Hizyu2fmPBEXVkVIQBAEAQBAEAWAS7UPwKk9cfoxf/VSbV1i+89JsTSa7vuSvSFDHM3BI243cQeLTuKraVadKW9BltWoU60d2auQHTurklPdw6cfjDa3qeN3bsXoMLjoVsnk/3Q8vjNm1KD3lnHn+TSKaVoWQEAWAXBqK69FB2P8ARI8LzOO+Ykey2a74WH7xJAohOCAhWruuDqnStdRtIdDExpY4DY9mFsgLhtGJxA/IKkVKG5SjPiwTQEHZ/dslHBlAEAQBAQ/XfQVY4916OnMdS1gY5nRLKiNhc5rC14LQ8F77H6RB4jvRqQXs1Fl9AfP+hdNVNFNz0DzHICQ4WyIvnHIzeL7t26xCt5041I2eaMl/6h6/waSGC3NVDRd0ZNw4C13xu+M252bR6TU18PKlnqjBMVHBVHKR8M/Vs9bl6DZfwPE8rtn5jwRFlZFSEAQBAEAQBAYcVhvI2irsmGog9zqP1foDlSbWVtzx+x6HYjupvtX3JmqgvTBCyYavkyFa26AjjaZojhzzj3G52t4DPZs4cDc4HHTlJU558n+Sg2js2EIurTyXFfgiYVwigYWTAQFucn/wKH9YP9xy8ztD5iXh9D1+yvlY+P1JBPM1jXPe4Na0FznE2AAFySdwUNK+hYlJ6/8AKq6YPp6AlkRu102Ye8f8ofEafGOZvlbfZ0MHa0p68jNiO8mVFpCaofHQy8wC1ommwtdzcYJIAxC9yQbAWvbPILtiXTUbzV+QPofRVAynhjhYXFrBa7jic7eXOcdpJuSetU8pbzuYPWsAIAgCAICl9buS+WapqJ4Z4xzkjn4Hsc0NLje2NpN7nO+HerCljYxioyRm5o9Bao19DXUU0gY1gniaZGytw2e4MLbEhxxBxFrb11niKdSEkuQPoRVRgqjlI+Gfq2/eevQbL+D4/g8rtn5jwRFlZFSEAQBAEAQBAYO0ef8Av+9y1epuslcmGo3vdV2N9T1TbX1j4/Yv9h6T8PuTMqnL44vdbrJ2D29SA0ms7PwWd23wRfse29uq/q61M2f8xH94EDafysvD6ldL0x44LICwC2OTt34HH+VL96/8V5zaPzD8D12yfll3s8vK3FK/R0kUR6cj4WBuIML7yNuwFxAztsvmLrjhWlUTkWRU1ByW6QfbnDFEN+J5e4fosBB86nSxtNaXZm5bXJnqt3vgljMgkc+TGXBmC3Qa0N2m9rE3+lsUDEVulknYwTFcAEAQBAEAQFd8suko4qVj2VJiqWvBi5txBeCQJGOtlhscWe9oUvBw3p2augUxprWarq2xNnlxiIlzSAGnEbdIltrkWyO65VlTowptuK1Mn0VqDpp1ZQU07zd5bheeL4yWOd5S2/lVPXhuVHFGCFcpI/Cx+bb956u9l/B8fweV2z8x4IiqsipCAIAgCAIAgMN4/wB2Wq5m8uRMNRve6rsb6nqm2vrHx+xf7D0n4fcmL3W6ydg/vcqcvjg4Wyv0nZX9ZHAD+9qA1mtYtSSgbLM++1Tdn/MR/eBA2n8rPw+pWq9KeOCyAgLV5N3fggHB8n/qf4rzu0vj+CPWbI+WXeyteXfTLpKqKkBOCFgkIvtkkvY9rWgWP0yumBhaLlzLVGho9c6mongiq618NOXNbIY/c+gNt3MGO7rWJvle66PDwjFuEbsH0bSyxua0xuaW2BGE3FiMrW3WVQ8nmYO5YAQBAEAQHVUsc5jmtOFxBAO2xIyNt6Apin5T3RvfT6Qpekxzo3mLMYmktdeKTdccfIrB4K63qbM2I/pPQI0lWk6Kax0b2Nc5oAhEJHRcXsIBAJAN2g3uV3hU6KFquvmC89T9AtoKSGmDsWAEudsxPcS5xA3C5NhwVZWqOpNyMED5SvhY/NN+89Xmy/gvv/B5bbXzC7kRRWRUBAEAQBAEBhxWr0No6mQsmG7slupLrR1I3kNy8j8+xUu19Y+P2PQ7D0n3r7kza23WTtP97lTl8cY8yXeQdnHy+oBAazW34JN+j99qm7P+Yj+8CBtP5Wfh9StF6U8cFkBAWhyZH8Fd1SPHnbGV57aa/veB6rYzvh33si/KvyfVFVN3ZSASOLWtkiuGu6F7PYXGxysC3LZle60wuJjCO5It0aLQGn6HRUDYpYucrWl/OhkbcTHFxtG+Z1hdosDYmxuulWlUryuvd4AlvJtrXU6RqZnc02KCFoyF3ue95OEF5sLANcSAPFXDEUI0YrO7ZgshRAEAQBAEAQFH8surDWVjKrG2KKoFpHkOcGyxt8VoJJcwCw4sdchT6GIlGk1GLk1olbj2vJJfqMo02rmlKbR00NRC556DXue9wHdELnc3PAIhkx7HAPAu4nm9uYUaE8XWm41UrXcXFL3Xa8ZX4prJ6JX0N5JcD6Fgma9rXsIc1wDmkbCCLgjyLi8smcyruUn4WPzbfvyL0Gy/gvv/AAeW218wu5fciisioCAIAgCAIDB29mf9+la8TdZIySjZhIl2oo9zquxv3Xql2trHx+x6HYjup+H3JhMfijf6BvP8O0hVBenMBAanW34JN+j99qmbP+Yj+8CBtP5WXh9StF6Y8cFkBAWZyXu/B5B/zXfcjVBtX4q7vuz0+xPgy7/sjZ6+awiho5JQW8660cQcQAZX5NJudjc3HqaVApQ3pZ6LN9yLkoDSmrzmyhgxBz5BEzHf3fCwGarLicoy4hwIvkT4pW+F2opU3OWaScpW/jd2jTtxlw/6dXGzsXpyY6v9xUETHe+SXmkyt0n2sM88mhrc+BWMRV6SdzkSxcQEAQBAEAQGn1s0CyupZaZ+WMXa7xJG5sf5DbtFxvXSlUdOakgUCyjq4mMjpo2NLQ5tS57Yjhma9weyodKOhG1obYZAg3zJWlWeHlVm8U5Xv7CW97tsnHd1k3e/FPLJHVXtkWlybaacx76GRpZHikdSF2WKIHE6MA5tw4g5odY4CNwXOjVVakpb15pLf7/v2tcbmk1ZnZyk6GccNS25DRgeODbkh3ncQfJ1q62ZiEr0nxzX4PP7YwrlatHhk/yV+ro89Y8c1eGzxw28Nrjfha9vUVGniFGtGlzRLp4Tfw8q19GkexSSI0FkwEAQHFp9K0T4nVrhyOQC2SNGyX6je91XY37r1S7X1j4/Y9BsPSfh9yXx53dx2fkjZ59vlCpy+PNpDS0EHvjwD4ozcf0Rmu9LDVavuojV8XRo+/Lw4kN0/rZzzHRMZZjrXLs3GxB2DJuY61b4bAqjJTk7vs0KPGbRlXg4QjZc3r5EbBVmncppRsZWxqZY0kgAXJNgBmSTsACw2krsyk27IuPVLQ/csAYfDN3PO7EQLgdQAA8hXl8XX6ao5LTgezwOG9HpKL1eb7yqdb9PyV880sGDmoRzVK92BzHS4286847tbI9uUZfYEDLMqPiJU6ThTqN2ec0r3tbLTNpP3racUWEIvUcm+gqiSWKGUuY1jpZJ4yQ8GIhojGA35pz3mQdGxc1r75WvrU9Hr1nVgk0lG0rNe0r3zy3rK2t7O1g20rF5LJzCAIAgCAIAgCAqPlh1efA/vpSsbjIEcpwBxYcgyoZfJrsgwutlcHLapVKMK8ehqt7utk7X7HbVcbcTKdiC6Q0xaZ7KQPdUOlhPPMdiD54RZ00MQb4T3F98yC2+WeXDBYWVOEK1eSjCKlaLVmoyd1GTvpFWtle50k03YvTVXTgroCJWBkzAGTxGxwuc29xYkOjeDcEEgg23FaqUXadJ3T0f7o0cpRv7MkQHXHVg0z7huKFx6JOeA+IT6jv7V6DCYqOIjuz976nlMdg54We9D3X/AI7CF1WhWueHtkexwBAIOLbwxXsNuXWtqmBUpqcZNNeP1NaW0pQpuEoqSfh9Dolgr2eBKyQcHNDT/flXKVPG0/dkpd52hV2dU9+Dj3PI8UmnqqL32EDrs5v7VyFGe0MTT+JD6olx2XhK3wpvzTOcetg+NF5nX9YC3jtfrQ/yaS2F1Z+aPS3WiEjNr29oB9RXX1rSa0aOD2LXT1TPTDp2mP4wDtDm+sLvDH4d/wAiPU2Zil/HyaPXFXwu8GVh7HBSI4ilL3ZLzIs8JXh70H5G/wBC6fhpop2vN3SWsARsAdfPygcc+pQMfR6aUbNLUs9mV+gjK8W27cDGk9dZZbhsjIm8GuAPlde/mslHC4enm2m+230FfGYqrlFNLsT+poH6QhzLpmHte32qZ09FayXmQPRsQ81B+TOHfWn+Wj+sFj0vDr+a8wsDin/CXkdlLUxvzjcHDiLkZdezit6dWE37Dua1aNWmrVFZ9p6F3IpPuT/VzZVSj82D1/jD/Dz8FSbRxd/7UPH8Hodk4HStPw/J08qWsj8L9HUj2CUxmSZznhgjgFgWBxIAc6+eeTbnK4KrYyhRSqVE7N2VlfPu/bvI9Alcr6UOp2tmhoY4XENYY389I2YPyAhlbLzc7XXB5t2fDFa6gU0sXPoalaU1fJx3U4260XHei11ll3HZu2di4+T7VsUNKGFjWyyuMsoZ4LXvz5tt/isFmjsvvU6rNyaV27K2evj2s4EmXMBAEAQBAEAQBAdVVTskY6ORocx4LXNOYc1wsQRwsibTugUHp/Qz9EzSwxhvTPOQSObi7pgya+iccyHZjJti/tLbdMTSWLlGdS7jo1e25LVVOTtxvprzOkZWR16Mr5tH4J4nuMkczYGUw90PNSYnmlnkb4b22yAHQL+JwjlRrKrWcbey470pvJNqy3ox4J8W9bdlzLjkXVojSlNpKmL2dJpux7HizmPHhRyN+K4H+BG5dWpUpJp9qf3RwnCM4uMldMgGtOqclMTJGC+HjtMfU/q+l57b73CY6NX2ZZS+p5bHbNlQe9DOP0IyrAqgUavqZTazR5Dq5FO7C2Hpm56HRJtwA2nqUKvhMO1eSt2rIscNj8Wnuwd+x5/vgeWt5OZg5rYZGuccXRJBwlpAIcWXIIuMsN+pVM8HGzlCWXaXdLaM7qM45/8Al6W7CM1uhKiIuxROs02JaMQB67ZjZvso88JWgruPlmS6WOoVMlLzy+prslHaJZiwSwMht8gM+HFEuCMN2V2bei1enkzIwDi7b5G7fPZTqOzq1TNqy7fwVtfa1CllF7z7Pyb+i1egjzcMbuLtnkbs891bUdnUaebzfaUmI2vXq5R9ldn5NsBbIZBT0ktCrbbzZMtTdUTKWzTttHtaw7ZOBcPE9fZtq8bjtz2KevF8i62ds1ztUqrLguf+vqSHXjWxtFGIocBqZB7mHGzIwSGiWZ2xjbkAXIuSBxIpUklvz0XLNvuWr5u3A9KlyKNo6l5nIqGujqo3SSGcsc83zdIKyIeFEQSC5uYabWcMl1xUd+lv05KVOdlu3t3Om+Esr2fHkzpHIsPku1Y5+pl0pK13NF5NOx+82sZALAFjBdjDbZuFgsZ0aEKLtvJZtfur1l2msndluLgahAEAQBAEAQBAEAQGn1p1ehr4HQS3HxmPHhRvHgvaeI9IuFvTqOErr/oKRjpZaJ0lBLFaaESytLCQ+sEmEWgf+LbgYMRbd5DXNbY3XHH0N+osRvezLdjn7sLXzkv5ZvK/sptNnaLyseTVPTNdBK6thtZ9mCBrDhqRHYc1FFGLhsbfj/FyGZJBm1JYehbDN6Zybfu34yk+MnouPDI0tvZl66t6xwV8ZLLtkblJDIMMkRPxXsOdjx2FR3G1mndPRrNPuZo1zNJrFqKx9309o3eIfAd2eIfR2Kyw20pQ9mpmufH/AGU2L2RGftUsny4f6IBpDR8sDsEzHMd17D1tOwjsVzSrQqK8Hc89WoVKUrTVjzseW5gkHqNlu0nqc1JxzR3w10jWhgecFw4sv0SQb9Juw+VaSpQbvbPmdI15xVr5cj3t0xGbtdA0R5EMZhBxB2K5e5pNjswjK25cPRpKzUs+b5dxI9Kg7pxy5Ln3nLSGg6aqDnGNj382CMDXNDABlfFZxNwR0S4dQUSUIt7s0rX46vxX3JsKlRJunJ3totF4P7XIzLqCwM51znRsw4mtcQOcyuAwu2+Qk9S5SwWHc7Qb7bcCRDaOJVO80ux8+7gzZ0ujKKCPodKRzci0HomwyeXAE532EjqUyhRcH7EUl/l/Ur8TiFUT35uT5cF9DoU8rDvo6SSVwZGwvcdwF/KeA6ytKlSNNXk7HWlSnUluwV2WFqzqM2MiSps520M2tb2+MfR27VSYraLn7NPJc+J6HBbJVNqdXN8uB6tctcY6MOiiLHThuI4j7nTsyHOzkZgXIswdJ5IA23Va7RSlLi7JLWT5L7vRLNl3FXyKkqrTWxyGeaUGpaH3jZXOcSIw8vIwc2A60N7OFsJGIqK8RUVSVRrdinuNr2nStrZLXey9vVPJrJHVWtb9Z7dS9W5tIOFOZcdJDgbNMAAZS04u5YZfCdCCQbnIWuLDCFPjCnCXpDhuyd3GN8lw3nHRSf8A3O5rKWVrl708DY2tYxoa1oDWtAsGtaLAAbgAuLbebOZ2IAgCAIAgCAIAgCAIAgI9rnqnBpGHm5OjI3OKVvhRO4ji02Fx1biAR1pVXTeWnFczKZSGlKCpp3TUdW8RynmQ1xcIo56WIPBhikthjFyHWIAJBxZ7VSjCE41qULxW9ey3mpytabWsuXNLQ6J3OyZk1O1s9NK90sAwQvjIMj6YyOdzs0eZfDe8bQBhNsWQwgx8Ji06zjUSipZyv7qnZLdi9FL+Ur58NbiUSytXOUhvRh0kwU0t8Ak2wyPb4Qxi4Y4HItJyO9SFGnVW9Qd1rbjZ6O3J8Gc3FonM9NHKyzg17HZ2IDmngR7QtIylB3TsznOnGa3ZK6IrpPUCnfcxOdEeHvjfMel6VYUtp1Y5TzKqtsajPOD3f8ojVZqJVsvgwSD6LrHytfb1qfDadGWt0VtTY9ePu2f72mpn0BVs8Knl8jC4edt1JjiqMtJIhywVeOsH5HmqJJrNheZLNthjdisCdlmHZt4LeKp5zjbv/wBnObq5QlfuO2PRFS/ZBKd3vbvXZayr0lrJG8cNXk/dfkbKj1MrX2HNhnW9wH7IufQo8toUI8b9yJUNl4mb923eyS6M5O2CxnkLvos6I8p2n0KDV2rJ5QVu8saOxYLOpK/cSlkNLRRF3ucMbc3OJDR2ucdp7c1XSnUqyzbbLilRhSVoKxXGsXKm2WVtLRuMTHkA1T22sDe3MsdsubASOyF72sLrpUoyp0ZVUt5r+P57uWvA7KN9SstJSy01QXjC2R1+chc81BwmwLKpzspHPzLm3y4NNrdKEYY7D7sm2uE7bufOHFbuif1zNn7L/f8AJJdWtA1el5pC2WoionEGXHIXNxZEwwtvheARYG3RAF88jpSw9LCQjvRg6kdGo2fe+N2tc9TDkXtorRsVNEyCFgZGwYWgesneTtJOZOa4Sk5O7ND1rUBAEAQBAEAQBAEAQBAEAQGp1l1dp6+Ew1DLja1wydG7xmO3H0Hfdb06kqbvEFIazaqVuiZH1IDp2BpbHUgkmC4wB0jM7ODLtBvhFwdwAlShSxcFSfsxveUbe9xt3XzfFm6lxNdoSWNtoA9hpmjnqyR7bslc6zWRgkEiznNYHDpYi924KBjYVH/eaaqN7tKKyaSzcssndJtp5WsuJumtOHE2OhNK1tIJTRPMTIozNJC+RtTTOZmR3O+5cC4Nkdh22Y67srLqsVG8I13vb8t1OzjJPjvLTJtK656Gu7kTPQ3LDHhZ3bSyRYgDzkYL4yDcBwB6QBLXWGezapDwybapyTaytxy18jSzJno3XLRtRbmquEk5YXODHX/IfY7uC4yo1I6owbuMtcLtIIO9py84XIHF9M0uDiASNhIBI7Ccws3aVjVxTd2jMr2NF3kAcXED0lYSbNiPaU1/0XTg46yIkfFjPOnfuZfgu0MPUlogQvSHK8+aRsGj6bpuNhJUGwblcnm2XNgATtv1HYulShCjSdWq8lyzNlG7sROapnq3ufUVDp3luOB8sErYGFmIyNjpy0NfLgGJmTr4SCL2tCxGKaiklaKdpxjOO87+63JO8Y3ylpa+TN1Ff9NRWiJ8bRUmZjR0oJHMYZZYybviMQd0Wl7i6Nx6Iu4XK70elhUbw+628ppN7sXwlvcXbKSWbyZl24kw1X5N5q57Kiua+GANa1kZPu8rG3wCZ4AtZtm4iA4gAZWuu8Jxw0HCGbbu+Sb13VwTedtL3OblcuejpI4WNjiY1jGCzWtFgANwAUVtt3ZqdywAgCAIAgCAIAgCAIAgCAIAgCAw4A5FAV/p/kwic50tBJ3LK4WcywfTyDxXwnIDsy+jddnVjUSjWW8lo9Gu1PVGyk0VtXaKq6CSNtXS81TmSV0skIMkTxLEYSRa+EMY59mmx6Tskr4bpqcpUpuU7RUd7Vbst7N/+mld9iNoyQmrIqmllja8NZihlcG9JzWBzo4oGN+NII4oxYZYpTfK5VdChVwuJjUlG7tJK+jdlKUm+Ccm9c91G9000cdO0NEzA1sVKDeRpbJLOxzhDgiJZIzok86ybN23I2W2BxGNqOTlOb0d1GLS3ryzTz91x00zEt08A0BGe5nRPe1rmYpgCCYXOhdUsw8WuYCATvY7qUxbTqLpY1IptO0P/SUlB37U8+5o13FkcK6rw08UrKuuxS85ha6W4HNua04iHA2Nzaw3KVQqYiWInSnGFo2u1e/tJtWv3GGlY7qfVtpFHLKJXse+AVAddrQ2pPuTo323AgOzJBLeNlDq7VnetTpuKaUtxrPOHvJr/K7L8jZRWX7qbDQWjGxsmMJHSkELJjYS08kjXtEb/Ee2ZkIxCwLZCRvAhY3GTqTpqrfJbzjnuySae8uacW+1NWZskknY0WmZZRHTiZ57ra9+ePHK2OzDGJHtJIeH48IJxAHdkrbBQpyq1Ohj/ZaWVrRcs72Tyta1+FzSTdlclehNWtJVo9yimpmPfHI6eqnfI4GMlzBAxzWuABN7m5OXS48lhaNOSdRxlZNJRgop313rN3y7l2GrlyLL1V5PqWjdzzy6oqTmZpukb8WNN8PbmetJVm47kUoxWiWRq3cl65GAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIDBCAi+luTzRlQcTqZrH3xY4SYXYr3xdCwJvvIXaOIqJWvdduZm5HKvkpeG83BpB4jzsyeGOpADrkhpda2ZJuOPHNat0ZT6SUPa5puLy7mZU2aQ8mGlo3SmKppX87DzD8XOM6AY2NuFrWnpBrQA7t4lbyjhKigpRfsy3lnxvd+DeqMqbNfUckelXxxRl9JhjDw20kt/dHYjf3LipNOvRhUnUV7ytfwVjXeZtYOS3Sb5HSyVkEbntMbhG18rRHZrcLQ/Dua23AtBvdRksLGmqe5dJ3z1vnm34s233e5tKHkbgu51TVzyl5LpAzDCyRxJddzekTmb7dq39JUUlCKW7kuLS0+hrdkw0Fqdo+jsaemja4fHIxv4++Pu70rlUr1J+8zBvlyAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQBAEAQH//Z",
-      start: "2017",
-      end: "2023",
+        "https://davmeerut.org/MyImages/LOGO.png",
+      start: "2006",
+      end: "2022",
     },
     {
-      school: "Peniel Seminary School",
-      href: "data:image/jpeg;base64,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",
-      degree: "SSCE",
-      logoUrl: "/ib.png",
-      start: "2006",
-      end: "2012",
+      school: "ABES Engineering College",
+      href: "https://abes.ac.in/",
+      degree: "B.Tech",
+      logoUrl: "https://scontent.fdel27-1.fna.fbcdn.net/v/t39.30808-1/300943914_461316889338355_7381212442247797989_n.png?_nc_cat=101&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=qkFawD9WDGEQ7kNvwGJGwkW&_nc_oc=AdnsgOWak2FgBkFpcI0jkQfeCE_WSPGGdmrfQ-hISn0jURcZkR0bsIzdKMlQZI8LxuE4CTDuHDuAeipz5VbYPwMx&_nc_zt=24&_nc_ht=scontent.fdel27-1.fna&_nc_gid=zGKfxp-RV29p5Lq_QPyeRg&oh=00_AfFdIVawVNlop77FKjKQFeGH3grMkT99On0q3C5smaUCFA&oe=6806ECCA",
+      start: "2023",
+      end: "2027",
     },
   ],
   projects: [
@@ -272,391 +272,7 @@ export const DATA = {
         "https://firebasestorage.googleapis.com/v0/b/temple-ajuzie.appspot.com/o/Web%20Images%2FScreen%20Recording%202024-11-10%20at%2012.32.32%E2%80%AFPM.mov?alt=media&token=13b19cd2-662c-41b7-982c-787c0bf936a9",
     },
   ],
-  // hackathons: [
-  //   {
-  //     title: "Hack Western 5",
-  //     dates: "November 23rd - 25th, 2018",
-  //     location: "London, Ontario",
-  //     description:
-  //       "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
-  //     mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-  //     links: [],
-  //   },
-  //   {
-  //     title: "Hack The North",
-  //     dates: "September 14th - 16th, 2018",
-  //     location: "Waterloo, Ontario",
-  //     description:
-  //       "Developed a mobile application which delivers university campus wide events in real time to all students.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
-  //     mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-  //     links: [],
-  //   },
-  //   {
-  //     title: "FirstNet Public Safety Hackathon",
-  //     dates: "March 23rd - 24th, 2018",
-  //     location: "San Francisco, California",
-  //     description:
-  //       "Developed a mobile application which communcicates a victims medical data from inside an ambulance to doctors at hospital.",
-  //     icon: "public",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png",
-  //     links: [],
-  //   },
-  //   {
-  //     title: "DeveloperWeek Hackathon",
-  //     dates: "February 3rd - 4th, 2018",
-  //     location: "San Francisco, California",
-  //     description:
-  //       "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg",
-  //     links: [
-  //       {
-  //         title: "Github",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/cryptotrends/cryptotrends",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "HackDavis",
-  //     dates: "January 20th - 21st, 2018",
-  //     location: "Davis, California",
-  //     description:
-  //       "Developed a mobile application which allocates a daily carbon emission allowance to users to move towards a sustainable environment.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-davis.png",
-  //     win: "Best Data Hack",
-  //     mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg",
-  //     links: [
-  //       {
-  //         title: "Devpost",
-  //         icon: <Icons.globe className="h-4 w-4" />,
-  //         href: "https://devpost.com/software/my6footprint",
-  //       },
-  //       {
-  //         title: "ML",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/Wallet6/my6footprint-machine-learning",
-  //       },
-  //       {
-  //         title: "iOS",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/Wallet6/CarbonWallet",
-  //       },
-  //       {
-  //         title: "Server",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/Wallet6/wallet6-server",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "ETH Waterloo",
-  //     dates: "October 13th - 15th, 2017",
-  //     location: "Waterloo, Ontario",
-  //     description:
-  //       "Developed a blockchain application for doctors and pharmacists to perform trustless transactions and prevent overdosage in patients.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/eth-waterloo.png",
-  //     links: [
-  //       {
-  //         title: "Organization",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/ethdocnet",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Hack The North",
-  //     dates: "September 15th - 17th, 2017",
-  //     location: "Waterloo, Ontario",
-  //     description:
-  //       "Developed a virtual reality application allowing users to see themselves in third person.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
-  //     mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-  //     links: [
-  //       {
-  //         title: "Streamer Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/justinmichaud/htn2017",
-  //       },
-  //       {
-  //         title: "Client Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/dillionverma/RTSPClient",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Hack The 6ix",
-  //     dates: "August 26th - 27th, 2017",
-  //     location: "Toronto, Ontario",
-  //     description:
-  //       "Developed an open platform for people shipping items to same place to combine shipping costs and save money.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-6ix.jpg",
-  //     mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-  //     links: [
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/ShareShip/ShareShip",
-  //       },
-  //       {
-  //         title: "Site",
-  //         icon: <Icons.globe className="h-4 w-4" />,
-  //         href: "https://share-ship.herokuapp.com/",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Stupid Hack Toronto",
-  //     dates: "July 23rd, 2017",
-  //     location: "Toronto, Ontario",
-  //     description:
-  //       "Developed a chrome extension which tracks which facebook profiles you have visited and immediately texts your girlfriend if you visited another girls page.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/stupid-hackathon.png",
-  //     links: [
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/nsagirlfriend/nsagirlfriend",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Global AI Hackathon - Toronto",
-  //     dates: "June 23rd - 25th, 2017",
-  //     location: "Toronto, Ontario",
-  //     description:
-  //       "Developed a python library which can be imported to any python game and change difficulty of the game based on real time emotion of player. Uses OpenCV and webcam for facial recognition, and a custom Machine Learning Model trained on a [Kaggle Emotion Dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/leaderboard) using [Tensorflow](https://www.tensorflow.org/Tensorflow) and [Keras](https://keras.io/). This project recieved 1st place prize at the Global AI Hackathon - Toronto and was also invited to demo at [NextAI Canada](https://www.nextcanada.com/next-ai).",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/global-ai-hackathon.jpg",
-  //     win: "1st Place Winner",
-  //     links: [
-  //       {
-  //         title: "Article",
-  //         icon: <Icons.globe className="h-4 w-4" />,
-  //         href: "https://syncedreview.com/2017/06/26/global-ai-hackathon-in-toronto/",
-  //       },
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/TinySamosas/",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "McGill AI for Social Innovation Hackathon",
-  //     dates: "June 17th - 18th, 2017",
-  //     location: "Montreal, Quebec",
-  //     description:
-  //       "Developed realtime facial microexpression analyzer using AI",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/ai-for-social-good.jpg",
-  //     links: [],
-  //   },
-  //   {
-  //     title: "Open Source Circular Economy Days Hackathon",
-  //     dates: "June 10th, 2017",
-  //     location: "Toronto, Ontario",
-  //     description:
-  //       "Developed a custom admin interface for food waste startup <a href='http://genecis.co/'>Genecis</a> to manage their data and provide analytics.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/open-source-circular-economy-days.jpg",
-  //     win: "1st Place Winner",
-  //     links: [
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/dillionverma/genecis",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Make School's Student App Competition 2017",
-  //     dates: "May 19th - 21st, 2017",
-  //     location: "International",
-  //     description: "Improved PocketDoc and submitted to online competition",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/make-school-hackathon.png",
-  //     win: "Top 10 Finalist | Honourable Mention",
-  //     links: [
-  //       {
-  //         title: "Medium Article",
-  //         icon: <Icons.globe className="h-4 w-4" />,
-  //         href: "https://medium.com/make-school/the-winners-of-make-schools-student-app-competition-2017-a6b0e72f190a",
-  //       },
-  //       {
-  //         title: "Devpost",
-  //         icon: <Icons.globe className="h-4 w-4" />,
-  //         href: "https://devpost.com/software/pocketdoc-react-native",
-  //       },
-  //       {
-  //         title: "YouTube",
-  //         icon: <Icons.youtube className="h-4 w-4" />,
-  //         href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-  //       },
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/dillionverma/pocketdoc-react-native",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "HackMining",
-  //     dates: "May 12th - 14th, 2017",
-  //     location: "Toronto, Ontario",
-  //     description: "Developed neural network to optimize a mining process",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-mining.png",
-  //     links: [],
-  //   },
-  //   {
-  //     title: "Waterloo Equithon",
-  //     dates: "May 5th - 7th, 2017",
-  //     location: "Waterloo, Ontario",
-  //     description:
-  //       "Developed Pocketdoc, an app in which you take a picture of a physical wound, and the app returns common solutions or cures to the injuries or diseases.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/waterloo-equithon.png",
-  //     links: [
-  //       {
-  //         title: "Devpost",
-  //         icon: <Icons.globe className="h-4 w-4" />,
-  //         href: "https://devpost.com/software/pocketdoc-react-native",
-  //       },
-  //       {
-  //         title: "YouTube",
-  //         icon: <Icons.youtube className="h-4 w-4" />,
-  //         href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-  //       },
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/dillionverma/pocketdoc-react-native",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "SpaceApps Waterloo",
-  //     dates: "April 28th - 30th, 2017",
-  //     location: "Waterloo, Ontario",
-  //     description:
-  //       "Developed Earthwatch, a web application which allows users in a plane to virtually see important points of interest about the world below them. They can even choose to fly away from their route and then fly back if they choose. Special thanks to CesiumJS for providing open source world and plane models.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/space-apps.png",
-  //     links: [
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/dillionverma/earthwatch",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "MHacks 9",
-  //     dates: "March 24th - 26th, 2017",
-  //     location: "Ann Arbor, Michigan",
-  //     description:
-  //       "Developed Super Graphic Air Traffic, a VR website made to introduce people to the world of air traffic controlling. This project was built completely using THREE.js as well as a node backend server.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/mhacks-9.png",
-  //     mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-  //     links: [
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/dillionverma/threejs-planes",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "StartHacks I",
-  //     dates: "March 4th - 5th, 2017",
-  //     location: "Waterloo, Ontario",
-  //     description:
-  //       "Developed at StartHacks 2017, Recipic is a mobile app which allows you to take pictures of ingredients around your house, and it will recognize those ingredients using ClarifAI image recognition API and return possible recipes to make. Recipic recieved 1st place at the hackathon for best pitch and hack.",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/starthacks.png",
-  //     win: "1st Place Winner",
-  //     mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-  //     links: [
-  //       {
-  //         title: "Source (Mobile)",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/mattBlackDesign/recipic-ionic",
-  //       },
-  //       {
-  //         title: "Source (Server)",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/mattBlackDesign/recipic-rails",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "QHacks II",
-  //     dates: "February 3rd - 5th, 2017",
-  //     location: "Kingston, Ontario",
-  //     description:
-  //       "Developed a mobile game which enables city-wide manhunt with random lobbies",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/qhacks.png",
-  //     mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-  //     links: [
-  //       {
-  //         title: "Source (Mobile)",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/dillionverma/human-huntr-react-native",
-  //       },
-  //       {
-  //         title: "Source (API)",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/mattBlackDesign/human-huntr-rails",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Terrible Hacks V",
-  //     dates: "November 26th, 2016",
-  //     location: "Waterloo, Ontario",
-  //     description:
-  //       "Developed a mock of Windows 11 with interesting notifications and functionality",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/terrible-hacks-v.png",
-  //     links: [
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Portal Hackathon",
-  //     dates: "October 29, 2016",
-  //     location: "Kingston, Ontario",
-  //     description:
-  //       "Developed an internal widget for uploading assignments using Waterloo's portal app",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png",
-  //     links: [
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/UWPortalSDK/crowmark",
-  //       },
-  //     ],
-  //   },
-  // ],
+
   certifications: [
     {
       title: "AWS Certified Cloud Practitioner",
