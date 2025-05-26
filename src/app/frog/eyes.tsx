@@ -8,63 +8,55 @@ interface EyeProps {
 const Eye: React.FC<EyeProps> = ({ id }) => {
   const [position, setPosition] = useState({ x: "50%", y: "50%" });
 
-interface PupilPosition {
-    x: string
-    y: string
-}
+  // common logic to update pupil position given an (dx, dy) offset
+  const updatePosition = (dx: number, dy: number, rect: DOMRect) => {
+    const angle = Math.atan2(dy, dx);
+    const maxDistance = rect.width / 4; // radius pupil can move
+    const moveX = Math.cos(angle) * maxDistance;
+    const moveY = Math.sin(angle) * maxDistance;
 
-const handleMouseMove = (event: MouseEvent): void => {
-    const eyeElement: HTMLDivElement | null = document.getElementById(id) as HTMLDivElement | null
-    if (eyeElement) {
-        const rect: DOMRect = eyeElement.getBoundingClientRect()
-        const eyeCenterX: number = rect.left + rect.width / 2
-        const eyeCenterY: number = rect.top + rect.height / 2
-
-        // Calculate relative position of the cursor within the eye
-        const dx: number = event.pageX - eyeCenterX
-        const dy: number = event.pageY - eyeCenterY
-        const angle: number = Math.atan2(dy, dx)
-
-        // Limit the pupil's movement within the eye
-        const maxDistance: number = rect.width / 4 // Maximum radius for the pupil
-        const moveX: number = Math.cos(angle) * maxDistance
-        const moveY: number = Math.sin(angle) * maxDistance
-
-        setPosition({
-            x: `${50 + (moveX / rect.width) * 100}%`,
-            y: `${50 + (moveY / rect.height) * 100}%`,
-        })
-    }
-}
+    setPosition({
+      x: `${50 + (moveX / rect.width) * 100}%`,
+      y: `${50 + (moveY / rect.height) * 100}%`,
+    });
+  };
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent): void => {
-      const eyeElement: HTMLDivElement | null = document.getElementById(id) as HTMLDivElement | null
-      if (eyeElement) {
-          const rect: DOMRect = eyeElement.getBoundingClientRect()
-          const eyeCenterX: number = rect.left + rect.width / 2
-          const eyeCenterY: number = rect.top + rect.height / 2
-
-          // Calculate relative position of the cursor within the eye
-          const dx: number = event.pageX - eyeCenterX
-          const dy: number = event.pageY - eyeCenterY
-          const angle: number = Math.atan2(dy, dx)
-
-          // Limit the pupil's movement within the eye
-          const maxDistance: number = rect.width / 4 // Maximum radius for the pupil
-          const moveX: number = Math.cos(angle) * maxDistance
-          const moveY: number = Math.sin(angle) * maxDistance
-
-          setPosition({
-              x: `${50 + (moveX / rect.width) * 100}%`,
-              y: `${50 + (moveY / rect.height) * 100}%`,
-          })
-      }
+      const eyeEl = document.getElementById(id);
+      if (!eyeEl) return;
+      const rect = eyeEl.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      updatePosition(event.pageX - centerX, event.pageY - centerY, rect);
     };
 
-    document.addEventListener("mousemove", handleMouseMove);
+    const handleDeviceOrientation = (e: DeviceOrientationEvent) => {
+      const eyeEl = document.getElementById(id);
+      if (!eyeEl) return;
+      const rect = eyeEl.getBoundingClientRect();
+
+      // gamma: left-to-right tilt, beta: front-to-back tilt
+      const gamma = e.gamma ?? 0; // [-90,90]
+      const beta = e.beta ?? 0;   // [-180,180]
+
+      // Normalize and clamp angles to [-30, 30]
+      const clampedX = Math.max(-30, Math.min(30, gamma));
+      const clampedY = Math.max(-30, Math.min(30, beta));
+
+      // Map tilt to pixel offsets
+      const factor = rect.width / 60; // so ±30° → ±rect.width/2
+      updatePosition(clampedX * factor, clampedY * factor, rect);
+    };
+
+    // Desktop: mouse
+    window.addEventListener("mousemove", handleMouseMove);
+    // Mobile: gyroscope
+    window.addEventListener("deviceorientation", handleDeviceOrientation);
+
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("deviceorientation", handleDeviceOrientation);
     };
   }, [id]);
 
@@ -80,7 +72,7 @@ const handleMouseMove = (event: MouseEvent): void => {
           left: position.x,
           transform: "translate(-50%, -50%)",
         }}
-      ></div>
+      />
     </div>
   );
 };

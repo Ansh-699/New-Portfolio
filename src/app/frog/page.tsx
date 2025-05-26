@@ -50,13 +50,13 @@ export default function Page() {
     <div className="relative w-full h-screen overflow-hidden bg-white dark:bg-black">
       {/* Frog centered */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <Image
+        {/* <Image
           src="/frog111.png"
           alt=""
           width={380}
           height={300}
           className="object-cover"
-        />
+        /> */}
       </div>
 
       {/* Eyes */}
