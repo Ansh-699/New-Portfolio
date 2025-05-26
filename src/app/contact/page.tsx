@@ -28,7 +28,6 @@ export default function Contact() {
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -71,7 +70,7 @@ export default function Contact() {
     },
   ];
 
-  if (!mounted) return null; // wait for theme
+  if (!mounted) return null; 
 
   return (
     <>
@@ -88,7 +87,7 @@ export default function Contact() {
         .pulse-border  { animation: pulse-border 2s ease-in-out infinite; }
       `}</style>
 
-      <main className="min-h-screen flex items-center justify-center px-4 py-8 pt-10 mt-10 bg-white dark:bg-gray-900 transition-colors">
+      <main className="min-h-screen flex items-center justify-center px-4 py-8 pt-10 mt-10 bg-white dark:bg-darkbg transition-colors">
         <div className="w-full max-w-6xl">
           <section className="glass-effect rounded-3xl shadow-2xl overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-0">

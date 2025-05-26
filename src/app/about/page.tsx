@@ -70,7 +70,7 @@ const Index = () => {
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen py-8 px-4 flex justify-center bg-white dark:bg-black transition-colors pt-10 mt-10">
+    <div className="min-h-screen py-8 px-4 flex justify-center bg-white dark:bg-darkbg transition-colors pt-10 mt-10">
       <div className="w-full max-w-3xl space-y-6">
         {/* Header */}
         <BlurFadeText
