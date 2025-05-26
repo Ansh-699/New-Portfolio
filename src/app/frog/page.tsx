@@ -37,6 +37,10 @@ export default function Page() {
         duration: gsap.utils.random(2, 5),
         repeat: -1,
         yoyo: true,
+        stagger: {
+          amount: 0.5,
+          from: 'random',
+        },
         ease: 'sine.inOut',
         delay: gsap.utils.random(0, 2),
       })
