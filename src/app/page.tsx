@@ -197,8 +197,7 @@ export default function Page() {
                 My Roadmap
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I am passionate about learning and have completed{" "}
-                {DATA.certifications.length} hackathons.
+               Innovate. Code. Persist. Succeed.
               </p>
             </div>
           </BlurFade>
