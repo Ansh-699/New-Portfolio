@@ -38,11 +38,35 @@ const handleMouseMove = (event: MouseEvent): void => {
 }
 
   useEffect(() => {
+    const handleMouseMove = (event: MouseEvent): void => {
+      const eyeElement: HTMLDivElement | null = document.getElementById(id) as HTMLDivElement | null
+      if (eyeElement) {
+          const rect: DOMRect = eyeElement.getBoundingClientRect()
+          const eyeCenterX: number = rect.left + rect.width / 2
+          const eyeCenterY: number = rect.top + rect.height / 2
+
+          // Calculate relative position of the cursor within the eye
+          const dx: number = event.pageX - eyeCenterX
+          const dy: number = event.pageY - eyeCenterY
+          const angle: number = Math.atan2(dy, dx)
+
+          // Limit the pupil's movement within the eye
+          const maxDistance: number = rect.width / 4 // Maximum radius for the pupil
+          const moveX: number = Math.cos(angle) * maxDistance
+          const moveY: number = Math.sin(angle) * maxDistance
+
+          setPosition({
+              x: `${50 + (moveX / rect.width) * 100}%`,
+              y: `${50 + (moveY / rect.height) * 100}%`,
+          })
+      }
+    };
+
     document.addEventListener("mousemove", handleMouseMove);
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [id]);
 
   return (
     <div

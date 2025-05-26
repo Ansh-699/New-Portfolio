@@ -45,7 +45,7 @@ export default function Page() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1200);
     return () => clearTimeout(timer);
   }, []);
 
