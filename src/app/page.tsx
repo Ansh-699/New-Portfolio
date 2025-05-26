@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -14,8 +15,10 @@ import dynamic from "next/dynamic";
 const LottieAnimation = dynamic(() => import("../components/lottie"), {
   ssr: false,
 });
-
 const LottieAnimation2 = dynamic(() => import("../components/lottie3"), {
+  ssr: false,
+});
+const LottieAnimation3 = dynamic(() => import("../components/littieloader"), {
   ssr: false,
 });
 
@@ -37,10 +40,28 @@ const iconMap: Record<string, string> = {
 };
 
 export default function Page() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <LottieAnimation3 />
+      </div>
+    );
+  }
+
   return (
     <main className="flex flex-col min-h-screen space-y-7 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       {/* Hero Lottie */}
-      <div className="w-full flex justify-center pt-8">
+      {/* Hero Lottie */}
+      <div className="w-full flex justify-center pt-8 min-h-[200px]">
         <LottieAnimation />
       </div>
 
@@ -66,9 +87,6 @@ export default function Page() {
                 <Avatar className="size-28 border p-1">
                   <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                   <LottieAnimation2 />
-                  {/* <AvatarFallback>{DATA.initials}
-                    
-                  </AvatarFallback> */}
                 </Avatar>
               </BlurFade>
             </div>
@@ -95,7 +113,10 @@ export default function Page() {
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
-            <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
+            <BlurFade
+              key={work.company}
+              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+            >
               <ResumeCard
                 logoUrl={work.logoUrl}
                 altText={work.company}
@@ -149,9 +170,17 @@ export default function Page() {
                   className={`tech-icon ${floatClass} flex flex-col items-center justify-center bg-white p-4 rounded-xl shadow-lg cursor-pointer`}
                 >
                   <div className="relative w-12 h-12 mb-2">
-                    <Image src={src} alt={tech} fill sizes="48px" className="object-contain" />
+                    <Image
+                      src={src}
+                      alt={tech}
+                      fill
+                      sizes="48px"
+                      className="object-contain"
+                    />
                   </div>
-                  <span className="text-xs font-medium text-gray-800">{tech}</span>
+                  <span className="text-xs font-medium text-gray-800">
+                    {tech}
+                  </span>
                 </div>
               );
             })}
@@ -164,15 +193,21 @@ export default function Page() {
         <div className="mx-auto w-full max-w-2xl space-y-12 py-2">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Roadmap</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                My Roadmap
+              </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I am passionate about learning and have completed {DATA.certifications.length} hackathons.
+                I am passionate about learning and have completed{" "}
+                {DATA.certifications.length} hackathons.
               </p>
             </div>
           </BlurFade>
           <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
             {DATA.certifications.map((project, id) => (
-              <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 15 + id * 0.05}>
+              <BlurFade
+                key={project.title}
+                delay={BLUR_FADE_DELAY * 15 + id * 0.05}
+              >
                 <HackathonCard
                   title={project.title}
                   description={project.description}
@@ -185,7 +220,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Contact Button Section */}
+      {/* Contact Button */}
       <section id="contact">
         <div className="mx-auto w-full max-w-2xl flex items-center justify-center px-4 py-6">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
@@ -208,35 +243,65 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Float animations & tech-icon hover */}
+      {/* Styles */}
       <style jsx>{`
         @keyframes float1 {
-          0%, 100% { transform: translateY(0) rotate(0deg); }
-          50%      { transform: translateY(-8px) rotate(2deg); }
+          0%,
+          100% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-8px) rotate(2deg);
+          }
         }
         @keyframes float2 {
-          0%, 100% { transform: translateY(0) rotate(0deg); }
-          50%      { transform: translateY(-6px) rotate(-2deg); }
+          0%,
+          100% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-6px) rotate(-2deg);
+          }
         }
         @keyframes float3 {
-          0%, 100% { transform: translateY(0) rotate(0deg); }
-          50%      { transform: translateY(-10px) rotate(3deg); }
+          0%,
+          100% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-10px) rotate(3deg);
+          }
         }
-        .floating-1 { animation: float1 8s ease-in-out infinite; }
-        .floating-2 { animation: float2 10s ease-in-out infinite; }
-        .floating-3 { animation: float3 12s ease-in-out infinite; }
-        .tech-icon { transition: transform 0.3s ease; }
-        .tech-icon:hover { transform: scale(1.9); }
-      `}</style>
+        .floating-1 {
+          animation: float1 8s ease-in-out infinite;
+        }
+        .floating-2 {
+          animation: float2 10s ease-in-out infinite;
+        }
+        .floating-3 {
+          animation: float3 12s ease-in-out infinite;
+        }
+        .tech-icon {
+          transition: transform 0.3s ease;
+        }
+        .tech-icon:hover {
+          transform: scale(1.9);
+        }
 
-      {/* Neon button tilt animation */}
-      <style jsx>{`
         @keyframes tilt {
-          0%   { transform: rotate(0deg) translateX(0); }
-          50%  { transform: rotate(5deg) translateX(2px); }
-          100% { transform: rotate(10deg) translateX(0); }
+          0% {
+            transform: rotate(0deg) translateX(0);
+          }
+          50% {
+            transform: rotate(5deg) translateX(2px);
+          }
+          100% {
+            transform: rotate(10deg) translateX(0);
+          }
         }
-        .animate-tilt { animation: tilt 5s linear infinite; }
+        .animate-tilt {
+          animation: tilt 5s linear infinite;
+        }
       `}</style>
     </main>
   );
