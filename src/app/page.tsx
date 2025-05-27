@@ -11,6 +11,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import dynamic from "next/dynamic";
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 const LottieAnimation = dynamic(() => import("../components/lottie"), {
   ssr: false,
@@ -55,6 +57,10 @@ export default function Page() {
         <LottieAnimation3 />
       </div>
     );
+  }
+
+  function cn(...inputs: ClassValue[]): string {
+    return twMerge(clsx(inputs));
   }
 
   return (
