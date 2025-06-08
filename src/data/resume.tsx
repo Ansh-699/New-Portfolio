@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon,Smile, Cat ,Notebook ,FolderOpenDot} from "lucide-react";
+import { HomeIcon, NotebookIcon, Smile, Cat, Notebook, FolderOpenDot } from "lucide-react";
 
 export const DATA = {
   name: "Ansh Tyagi",
@@ -11,7 +11,7 @@ export const DATA = {
     "Experienced Full Stack Developer with a strong focus on API development and cloud-based architecture. Passionate about building robust, scalable, and secure end-to-end applications.",
   summary:
     "Hard-working and enthusiastic web developer with a passion for building dynamic, responsive applications. Pursuing a degree in Computer Science, with a strong focus on clean, efficient code and continuous learning. Actively explores new technologies through personal projects, open-source contributions, and coding challenges.",
-  
+
   avatarUrl:
     "https://scontent-zrh1-1.xx.fbcdn.net/v/t39.30808-6/308443832_109109325295191_1674111835950351444_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeENRXIJ-jJ1K3t_eCIbMRWdz3iBgLaL9HfPeIGAtov0dxK86MNMwOPmVD5g0-a_dQdpvvgFL6HKCZDl6KREFLcx&_nc_ohc=3n2ER2TspfgQ7kNvgE3TxmB&_nc_zt=23&_nc_ht=scontent-zrh1-1.xx&_nc_gid=Aq_ffTslBDJDAYin_VulxKw&oh=00_AYDbE7FDW9-UfXMyJTeTEVaXh2GqyT25urlb08siQDc96Q&oe=67353D25",
   skills: [
@@ -22,15 +22,15 @@ export const DATA = {
     "AWS",
     "AZURE",
     "MongoDB",
-     "Docker",
-     "Kubernetes",
-     
+    "Docker",
+    "Kubernetes",
+
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     {
       href: "/about",
-      icon: FolderOpenDot ,
+      icon: FolderOpenDot,
       label: "Projects",
     },
     {
@@ -40,7 +40,7 @@ export const DATA = {
     },
     {
       href: "/contact",
-      icon: Notebook ,
+      icon: Notebook,
       label: "contact",
     },
   ],
@@ -68,7 +68,7 @@ export const DATA = {
 
         navbar: true,
       },
-     
+
       email: {
         name: "Send Email",
         url: "www.gmail.com",
@@ -152,7 +152,7 @@ export const DATA = {
       end: "2027",
     },
   ],
- 
+
 
   certifications: [
     {
@@ -170,8 +170,8 @@ export const DATA = {
         },
       ],
     },
-    
-     {
+
+    {
       title: "Node.js Development",
       platform: "Harkirit",
       description:
@@ -201,7 +201,7 @@ export const DATA = {
         },
       ],
     },
-   
+
     {
       title: "React.js",
       platform: "Harkirit",
@@ -217,7 +217,7 @@ export const DATA = {
         },
       ],
     },
-     {
+    {
       title: "Next.js",
       platform: "Harkirit",
       description:
