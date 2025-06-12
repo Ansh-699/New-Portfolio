@@ -19,5 +19,4 @@ Welcome to my personal portfolio website built with **Next.js**, **Tailwind CSS*
 
 ---
 
-## 📁 Project Structure
 
