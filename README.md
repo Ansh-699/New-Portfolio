@@ -3,11 +3,11 @@
 
 Welcome to my personal portfolio website built with **Next.js**, **Tailwind CSS**, and modern web practices. This project showcases my work, technical skills, and development experience in a clean and responsive UI.
 
-![Portfolio Preview](https://raw.githubusercontent.com/Ansh-699/New-Portfolio/main/public/preview.png) <!-- Optional: Replace or remove -->
+![Portfolio Preview](https://anshtyagi.me/) <!-- Optional: Replace or remove -->
 
 ## 🔗 Live Demo
 
-🌐 [Visit Portfolio](https://anshtyagi.in)  
+🌐 [Visit Portfolio]((https://anshtyagi.me/))  
 📫 [Contact Me](mailto:anshtyagi699@gmail.com)
 
 ---
