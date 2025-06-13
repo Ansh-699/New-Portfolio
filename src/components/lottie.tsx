@@ -9,5 +9,5 @@ export default function LottieAnimation() {
     const { theme } = useTheme();
     const animationData = theme === 'dark' ? helloAnimationDark : helloAnimation;
 
-    return <Lottie animationData={animationData} style={{ width: 200, height: 200 }} loop autoplay />;
+    return <Lottie animationData={animationData} style={{ width: 250, height: 200 }} loop autoplay />;
 }

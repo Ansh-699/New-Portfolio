@@ -103,7 +103,7 @@ const Index = () => {
         {/* Header */}
         <BlurFadeText
           delay={BLUR_FADE_DELAY}
-          className="block w-full text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
+          className="block w-full text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 pt-8"
           text="My Projects"
         />
 
