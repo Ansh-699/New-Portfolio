@@ -1,6 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import gsap from "gsap";
+import { Draggable } from "gsap/Draggable";
+import { InertiaPlugin } from "gsap/InertiaPlugin";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -14,15 +17,12 @@ import dynamic from "next/dynamic";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const LottieAnimation = dynamic(() => import("../components/lottie"), {
-  ssr: false,
-});
-const LottieAnimation2 = dynamic(() => import("../components/lottie3"), {
-  ssr: false,
-});
-const LottieAnimation3 = dynamic(() => import("../components/littieloader"), {
-  ssr: false,
-});
+// Register GSAP plugins
+gsap.registerPlugin(Draggable, InertiaPlugin);
+
+const LottieAnimation = dynamic(() => import("../components/lottie"), { ssr: false });
+const LottieAnimation2 = dynamic(() => import("../components/lottie3"), { ssr: false });
+const LottieAnimation3 = dynamic(() => import("../components/littieloader"), { ssr: false });
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -43,13 +43,46 @@ const iconMap: Record<string, string> = {
 
 export default function Page() {
   const [loading, setLoading] = useState(true);
+  const iconsRef = useRef<HTMLDivElement[]>([]);
 
+  // Loading spinner
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1200);
+    const timer = setTimeout(() => setLoading(false), 1200);
     return () => clearTimeout(timer);
   }, []);
+
+  // Initialize Draggable on icons
+  useEffect(() => {
+    // Ensure GSAP and plugins are loaded (they are registered globally)
+    if (typeof Draggable === "undefined" || typeof InertiaPlugin === "undefined") {
+      console.error("GSAP Draggable or InertiaPlugin not loaded");
+      return;
+    }
+    
+    iconsRef.current.forEach((el) => {
+      if (!el) return;
+      const floatClass = el.dataset.floatClass!;
+      Draggable.create(el, {
+        type: "x,y", // Allows dragging in x and y axes
+        inertia: true, // Enables throwable (momentum-based) movement after release
+        edgeResistance: 0.8, // Resistance when hitting bounds
+        bounds: "body", // Constrains movement within the body element
+        onDragStart() {
+          el.classList.remove(floatClass); // Stop floating animation during drag
+          gsap.to(el, { scale: 1.2, duration: 0.2 }); // Scale up on drag start
+        },
+        onRelease() {
+          // This callback is fired when the user releases the mouse/touch.
+          // InertiaPlugin handles the continuation of movement.
+          gsap.to(el, { scale: 1, duration: 0.2 }); // Scale down on release
+        },
+        onDragEnd() {
+          // This callback is fired after all movement (including inertia) has stopped.
+          el.classList.add(floatClass); // Resume floating animation after drag
+        },
+      });
+    });
+  }, [loading]); // Re-run if loading state changes, ensuring icons are present
 
   if (loading) {
     return (
@@ -59,13 +92,12 @@ export default function Page() {
     );
   }
 
-  function cn(...inputs: ClassValue[]): string {
+  function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
   }
 
   return (
-    <main className="flex flex-col min-h-screen space-y-7  px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      {/* Hero Lottie */}
+    <main className="flex flex-col min-h-screen space-y-7 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
       {/* Hero Lottie */}
       <div className="w-full flex justify-center pt-8 min-h-[200px]">
         <LottieAnimation />
@@ -119,10 +151,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-            >
+            <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
               <ResumeCard
                 logoUrl={work.logoUrl}
                 altText={work.company}
@@ -162,9 +191,7 @@ export default function Page() {
       {/* Skills */}
       <section id="skills" className="relative">
         <BlurFade delay={BLUR_FADE_DELAY * 9}>
-          <h2 className="text-2xl font-bold text-center mb-8">
-            Technologies &amp; Tools 🛠️
-          </h2>
+          <h2 className="text-2xl font-bold text-center mb-8">Technologies &amp; Tools 🛠️</h2>
         </BlurFade>
         <div className="py-8">
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
@@ -173,20 +200,18 @@ export default function Page() {
               return (
                 <div
                   key={tech}
-                  className={`tech-icon ${floatClass} flex flex-col items-center justify-center bg-white p-4 rounded-xl shadow-lg cursor-pointer`}
+                  ref={(el) => { if (el) iconsRef.current[idx] = el; }}
+                  data-float-class={floatClass}
+                  className={cn(
+                    "tech-icon relative",
+                    floatClass,
+                    "flex flex-col items-center justify-center bg-white p-4 rounded-xl shadow-lg cursor-grab"
+                  )}
                 >
                   <div className="relative w-12 h-12 mb-2">
-                    <Image
-                      src={src}
-                      alt={tech}
-                      fill
-                      sizes="48px"
-                      className="object-contain"
-                    />
+                    <Image src={src} alt={tech} fill sizes="48px" className="object-contain pointer-events-none" />
                   </div>
-                  <span className="text-xs font-medium text-gray-800">
-                    {tech}
-                  </span>
+                  <span className="text-xs font-medium text-gray-800 select-none pointer-events-none">{tech}</span>
                 </div>
               );
             })}
@@ -194,25 +219,20 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Hackathons */}
+      {/* Hackathons / Roadmap */}
       <section id="hackathons">
         <div className="mx-auto w-full max-w-2xl space-y-12 py-2">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                My Roadmap
-              </h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Roadmap</h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-               Innovate. Code. Persist. Succeed.
+                Innovate. Code. Persist. Succeed.
               </p>
             </div>
           </BlurFade>
           <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
             {DATA.certifications.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-              >
+              <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 15 + id * 0.05}>
                 <HackathonCard
                   title={project.title}
                   description={project.description}
@@ -250,64 +270,23 @@ export default function Page() {
 
       {/* Styles */}
       <style jsx>{`
-        @keyframes float1 {
-          0%,
-          100% {
-            transform: translateY(0) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-8px) rotate(2deg);
-          }
-        }
-        @keyframes float2 {
-          0%,
-          100% {
-            transform: translateY(0) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-6px) rotate(-2deg);
-          }
-        }
-        @keyframes float3 {
-          0%,
-          100% {
-            transform: translateY(0) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-10px) rotate(3deg);
-          }
-        }
-        .floating-1 {
-          animation: float1 8s ease-in-out infinite;
-        }
-        .floating-2 {
-          animation: float2 10s ease-in-out infinite;
-        }
-        .floating-3 {
-          animation: float3 12s ease-in-out infinite;
-        }
-        .tech-icon {
-          transition: transform 0.3s ease;
-        }
-        .tech-icon:hover {
-          transform: scale(1.9);
-        }
+        /* floating animations */
+        @keyframes float1 { 0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-8px) rotate(2deg);} }
+        @keyframes float2 { 0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-6px) rotate(-2deg);} }
+        @keyframes float3 { 0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-10px) rotate(3deg);} }
+        .floating-1 { animation: float1 8s ease-in-out infinite; }
+        .floating-2 { animation: float2 10s ease-in-out infinite; }
+        .floating-3 { animation: float3 12s ease-in-out infinite; }
 
-        @keyframes tilt {
-          0% {
-            transform: rotate(0deg) translateX(0);
-          }
-          50% {
-            transform: rotate(5deg) translateX(2px);
-          }
-          100% {
-            transform: rotate(10deg) translateX(0);
-          }
-        }
-        .animate-tilt {
-          animation: tilt 5s linear infinite;
-        }
+        /* hover scale */
+        .tech-icon { transition: transform 0.3s ease; }
+        .tech-icon:hover { transform: scale(1.9); }
+
+        /* tilt background */
+        @keyframes tilt { 0%{transform:rotate(0deg) translateX(0);}50%{transform:rotate(5deg) translateX(2px);}100%{transform:rotate(10deg) translateX(0);} }
+        .animate-tilt { animation: tilt 5s linear infinite; }
       `}</style>
     </main>
   );
 }
+
