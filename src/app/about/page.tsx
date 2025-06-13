@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+import ShootingStars from "@/components/shooting-stars";
 
 interface Project {
   title: string;
@@ -97,6 +98,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen py-8 px-4 flex justify-center bg-white dark:bg-darkbg transition-colors pt-10 mt-10 max-w-3xl mx-auto">
+       <ShootingStars />
       <div className="w-full max-w-3xl space-y-6 ">
         {/* Header */}
         <BlurFadeText

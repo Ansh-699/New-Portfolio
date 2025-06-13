@@ -19,6 +19,7 @@ import {
   Linkedin,
   Twitter,
 } from "lucide-react";
+import ShootingStars from "@/components/shooting-stars";
 
 const LottieAnimation = dynamic(() => import("../../components/lottie2"), {
   ssr: false,
@@ -99,6 +100,7 @@ export default function Contact() {
     <>
       <Toaster position="top-right" />
       <main className="min-h-screen flex items-center justify-center px-4 py-8 pt-10 mt-10 bg-white dark:bg-darkbg transition-colors max-w-3xl mx-auto">
+         <ShootingStars />
         <div className="w-full max-w-6xl">
           <section className="glass-effect rounded-3xl shadow-2xl overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-0">

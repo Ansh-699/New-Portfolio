@@ -15,7 +15,9 @@ import Image from "next/image";
 import Markdown from "react-markdown";
 import dynamic from "next/dynamic";
 import { clsx, type ClassValue } from "clsx";
+
 import { twMerge } from "tailwind-merge";
+import ShootingStars from "@/components/shooting-stars"; 
 
 // Register GSAP plugins
 gsap.registerPlugin(Draggable, InertiaPlugin);
@@ -99,6 +101,7 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-screen space-y-7 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
       {/* Hero Lottie */}
+       <ShootingStars />
       <div className="w-full flex justify-center pt-8 min-h-[200px]">
         <LottieAnimation />
       </div>

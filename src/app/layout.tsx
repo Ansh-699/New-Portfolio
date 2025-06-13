@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import ShootingStars from "@/components/shooting-stars"; 
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -57,15 +58,17 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased  py-10 sm:py-5 px-6",
+          "min-h-screen bg-background font-sans antialiased py-10 sm:py-5 px-6",
           fontSans.variable
         )}
       >
+        
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             <Navbar />
             {children}
           </TooltipProvider>
+          {/* <ShootingStars /> */}
         </ThemeProvider>
       </body>
     </html>
