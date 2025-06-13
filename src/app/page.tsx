@@ -64,7 +64,7 @@ export default function Page() {
   }
 
   return (
-    <main className="flex flex-col min-h-screen space-y-7 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <main className="flex flex-col min-h-screen space-y-7  px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
       {/* Hero Lottie */}
       {/* Hero Lottie */}
       <div className="w-full flex justify-center pt-8 min-h-[200px]">

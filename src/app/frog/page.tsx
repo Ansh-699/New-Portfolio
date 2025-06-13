@@ -11,7 +11,7 @@ type EyePos = { x: number; y: number; id: string }
 gsap.registerPlugin(Draggable, InertiaPlugin)
 
 export default function Page() {
-  const EYE_COUNT = 50
+  const EYE_COUNT = 100
 
   const [positions, setPositions] = useState<EyePos[]>([])
   useEffect(() => {
