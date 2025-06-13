@@ -15,13 +15,13 @@ export default function ShootingStars() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [showStars, setShowStars] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setMounted(true);
 
     const handleResize = () => {
-      setShowStars(window.innerWidth >= 768); // Tailwind's md breakpoint
+      setIsMobile(window.innerWidth < 768); // mobile if width < md breakpoint
     };
 
     handleResize(); // Initial check
@@ -30,31 +30,32 @@ export default function ShootingStars() {
   }, []);
 
   useEffect(() => {
-    if (!mounted || !showStars || !canvasRef.current) return;
+    if (!mounted || !canvasRef.current) return;
 
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let windowWidth = window.innerWidth;
-    let windowHeight = window.innerHeight;
+    let windowWidth = isMobile ? 200 : window.innerWidth;
+    let windowHeight = isMobile ? 200 : window.innerHeight;
     canvas.width = windowWidth;
     canvas.height = windowHeight;
 
-    const numStars = 60;
+    const numStars = isMobile ? 15 : 60;
+
     const stars: Star[] = Array.from({ length: numStars }, () => {
-      const speed = Math.random() * 1.5 + 1.5;
-      const angle = (3 * Math.PI) / 4; // top-right to bottom-left
-      const vx = speed * Math.cos(angle); // negative
-      const vy = speed * Math.sin(angle); // positive
-      const tailLength = Math.random() * 70 + 40;
+      const speed = Math.random() * (isMobile ? 1.0 : 1.5) + 1.0;
+      const angle = (3 * Math.PI) / 4; // 135° direction
+      const vx = speed * Math.cos(angle);
+      const vy = speed * Math.sin(angle);
+      const tailLength = Math.random() * (isMobile ? 40 : 70) + (isMobile ? 20 : 40);
 
       return {
         vx,
         vy,
         tailLength,
-        x: windowWidth + Math.random() * windowWidth, // Start off-screen right
-        y: Math.random() * (windowHeight / 3), // top 1/3
+        x: windowWidth + Math.random() * windowWidth,
+        y: Math.random() * (windowHeight / 2),
       };
     });
 
@@ -81,7 +82,7 @@ export default function ShootingStars() {
 
       for (const star of stars) {
         ctx.strokeStyle = getGradient(star);
-        ctx.lineWidth = 1.5;
+        ctx.lineWidth = isMobile ? 1 : 1.5;
         ctx.beginPath();
         ctx.moveTo(star.x, star.y);
         ctx.lineTo(
@@ -98,7 +99,7 @@ export default function ShootingStars() {
 
         if (tailX < -100 || tailY > windowHeight + 100) {
           star.x = windowWidth + Math.random() * windowWidth;
-          star.y = Math.random() * (windowHeight / 3);
+          star.y = Math.random() * (windowHeight / 2);
         }
       }
 
@@ -108,8 +109,8 @@ export default function ShootingStars() {
     draw();
 
     const handleResize = () => {
-      windowWidth = window.innerWidth;
-      windowHeight = window.innerHeight;
+      windowWidth = isMobile ? 200 : window.innerWidth;
+      windowHeight = isMobile ? 200 : window.innerHeight;
       canvas.width = windowWidth;
       canvas.height = windowHeight;
     };
@@ -119,15 +120,19 @@ export default function ShootingStars() {
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [resolvedTheme, mounted, showStars]);
+  }, [resolvedTheme, mounted, isMobile]);
 
-  if (!mounted || !showStars) return null;
+  if (!mounted) return null;
 
   return (
     <canvas
       ref={canvasRef}
       id="shooting-stars-canvas"
-      className="fixed top-0 left-0 w-full h-full z-[-10] pointer-events-none transition-colors"
+      className={`pointer-events-none z-[-10] transition-colors fixed ${
+        isMobile
+          ? "bottom-2 right-2 w-[400px] h-[700px] rounded-lg opacity-70"
+          : "top-0 left-0 w-full h-full"
+      }`}
     />
   );
 }
