@@ -99,9 +99,9 @@ export default function Contact() {
   return (
     <>
       <Toaster position="top-right" />
-      <main className="min-h-screen flex items-center justify-center px-4 py-8 pt-10 mt-10 bg-white dark:bg-darkbg transition-colors max-w-3xl mx-auto">
+      <main className="min-h-screen flex items-center justify-center pt-10 mt-10 bg-white dark:bg-darkbg transition-colors max-w-3xl mx-auto ">
          <ShootingStars />
-        <div className="w-full max-w-6xl">
+        <div className="w-full ">
           <section className="glass-effect rounded-3xl shadow-2xl overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Left Panel */}
